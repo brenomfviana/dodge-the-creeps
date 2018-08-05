@@ -8,10 +8,10 @@ In Dodge the Creeps, the player must move the character to avoid the enemies for
 
 <div style="margin: 0 auto; max-width: 250px;">
 	<p align="center">
-		<img height="450px" src ="img/img1.png"/>
-		<img height="450px" src ="img/img2.png"/>
-		<img height="450px" src ="img/img3.png"/>
-		<img height="450px" src ="img/img4.png"/>
+		<img height="325px" src ="img/img1.png"/>
+		<img height="325px" src ="img/img2.png"/>
+		<img height="325px" src ="img/img3.png"/>
+		<img height="325px" src ="img/img4.png"/>
 	</p>
 </div>
 
