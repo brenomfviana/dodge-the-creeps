@@ -15,7 +15,6 @@ func _ready():
 	#
 	screensize = get_viewport_rect().size
 	hide()
-	pass
 
 func _process(delta):
 	# The player's movement vector
@@ -46,3 +45,14 @@ func _process(delta):
 	elif velocity.y != 0:
 		$AnimatedSprite.animation = "up"
 		$AnimatedSprite.flip_v = velocity.y > 0
+
+func _on_Player_body_entered(body):
+	# Player disappears after being hit
+	hide()
+	emit_signal("hit")
+	$CollisionShape2D.disabled = false
+
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
