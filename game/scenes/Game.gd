@@ -24,6 +24,7 @@ func new_game():
 func _on_StartTimer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
+	$Player.started = true
 
 func _on_ScoreTimer_timeout():
 	score += 1
