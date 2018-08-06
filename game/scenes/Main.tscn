@@ -17,35 +17,51 @@ _data = {
 script = ExtResource( 1 )
 Mob = ExtResource( 2 )
 
-[node name="Player" parent="." index="0" instance=ExtResource( 3 )]
+[node name="ColorRect" type="ColorRect" parent="." index="0"]
 
-[node name="MobTimer" type="Timer" parent="." index="1"]
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 480.0
+margin_bottom = 720.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+color = Color( 0.158248, 0.429688, 0.127563, 1 )
+
+[node name="Player" parent="." index="1" instance=ExtResource( 3 )]
+
+[node name="MobTimer" type="Timer" parent="." index="2"]
 
 process_mode = 1
 wait_time = 0.5
 one_shot = false
 autostart = false
 
-[node name="ScoreTimer" type="Timer" parent="." index="2"]
+[node name="ScoreTimer" type="Timer" parent="." index="3"]
 
 process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
 
-[node name="StartTimer" type="Timer" parent="." index="3"]
+[node name="StartTimer" type="Timer" parent="." index="4"]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = true
 autostart = false
 
-[node name="StartPosition" type="Position2D" parent="." index="4"]
+[node name="StartPosition" type="Position2D" parent="." index="5"]
 
 position = Vector2( 240, 450 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="MobPath" type="Path2D" parent="." index="5"]
+[node name="MobPath" type="Path2D" parent="." index="6"]
 
 curve = SubResource( 1 )
 
@@ -61,7 +77,23 @@ cubic_interp = true
 loop = true
 lookahead = 4.0
 
-[node name="HUD" parent="." index="6" instance=ExtResource( 4 )]
+[node name="HUD" parent="." index="7" instance=ExtResource( 4 )]
+
+[node name="Music" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="." index="9"]
+
+stream = null
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 
