@@ -6,7 +6,7 @@ In Dodge the Creeps, the player must move the character to avoid the enemies for
 
 ## Preview
 
-<div style="margin: 0 auto; max-width: 250px;">
+<div style="margin: 0 auto; max-width: 200px;">
 	<p align="center">
 		<img height="325px" src ="img/img1.png"/>
 		<img height="325px" src ="img/img2.png"/>
